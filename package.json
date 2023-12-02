@@ -1,21 +1,21 @@
 {
-  "name": "turborepo-basic-yarn",
+  "name": "turborepo-basic-pnpm",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "test": "turbo run test",
-    "lint": "turbo run lint",
+    "build": "dotenv -- turbo run build",
+    "dev": "dotenv -- turbo run dev --parallel",
+    "test": "dotenv -- turbo run test",
+    "lint": "dotenv -- turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install"
   },
   "dependencies": {
-    "app": "workspace:*",
-    "config": "workspace:*",
-    "lib": "workspace:*",
-    "tsconfig": "workspace:*",
-    "ui": "workspace:*"
+    "app": "workspace:^0.1.0",
+    "config": "workspace:^0.1.0",
+    "lib": "workspace:^0.1.0",
+    "tsconfig": "workspace:^0.1.0",
+    "ui": "workspace:^0.1.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -23,6 +23,7 @@
     "@testing-library/react-hooks": "^8.0.1",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.1",
+    "dotenv-cli": "latest",
     "esbuild": "^0.17.18",
     "esbuild-jest": "^0.5.0",
     "husky": "^8.0.3",
