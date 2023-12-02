@@ -1,14 +1,13 @@
 {
   "name": "ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "./index.tsx",
   "types": "./index.tsx",
-  "license": "MIT",
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.14",
-    "tsconfig": "workspace:*",
+    "tsconfig": "workspace:^0.1.0",
     "typescript": "5.2.2"
   },
   "dependencies": {
@@ -17,7 +16,7 @@
     "@heroicons/react": "^2.0.18",
     "@hookform/resolvers": "3.3.1",
     "@tippyjs/react": "4.2.6",
-    "lib": "workspace:*",
+    "lib": "workspace:^0.1.0",
     "postcss": "8.4.31",
     "react-hook-form": "^7.46.1",
     "react-hot-toast": "2.4.1",

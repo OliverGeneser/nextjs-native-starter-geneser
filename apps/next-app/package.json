@@ -1,6 +1,6 @@
 {
   "name": "next-app",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0",
@@ -21,7 +21,7 @@
     "@capacitor/ios": "^5.5.0",
     "@capacitor/preferences": "^5.0.6",
     "@capacitor/splash-screen": "^5.0.6",
-    "app": "workspace:*",
+    "app": "workspace:^0.1.0",
     "autoprefixer": "10.4.15"
   }
 }
