@@ -4,24 +4,25 @@
   "main": "./index.tsx",
   "types": "./index.tsx",
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/forms": "^0.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.14",
     "tsconfig": "workspace:^0.1.0",
     "typescript": "5.2.2"
   },
   "dependencies": {
-    "autoprefixer": "10.4.15",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@hookform/resolvers": "3.3.1",
     "@tippyjs/react": "4.2.6",
+    "api": "workspace:^0.1.0",
+    "autoprefixer": "10.4.16",
     "lib": "workspace:^0.1.0",
     "postcss": "8.4.31",
-    "react-hook-form": "^7.46.1",
+    "react-hook-form": "^7.48.2",
     "react-hot-toast": "2.4.1",
-    "tailwindcss": "3.3.3",
-    "zod": "3.22.2",
-    "zustand": "4.4.1"
+    "tailwindcss": "3.3.5",
+    "zod": "3.22.4",
+    "zustand": "4.4.7"
   }
 }
