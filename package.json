@@ -1,5 +1,5 @@
 {
-  "name": "turborepo-basic-pnpm",
+  "name": "turborepo-trpc-pnpm",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,8 +11,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "api": "workspace:^0.1.0",
     "app": "workspace:^0.1.0",
     "config": "workspace:^0.1.0",
+    "db": "workspace:^0.1.0",
     "lib": "workspace:^0.1.0",
     "tsconfig": "workspace:^0.1.0",
     "ui": "workspace:^0.1.0"
