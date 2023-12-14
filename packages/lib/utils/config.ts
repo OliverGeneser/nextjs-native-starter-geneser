@@ -19,6 +19,7 @@ export const REDIRECT_URL = !IS_IN_PRODUCTION_ENVIRONMENT
 export const APP_ORIGIN_URLS = [
   'capacitor://localhost',
   'http://localhost',
+  'https://localhost',
   'ionic://localhost',
   `ionic://${FRONTEND_URL.split('://')[1]}`,
   `next.supertokens.app`,
