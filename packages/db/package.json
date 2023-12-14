@@ -1,0 +1,27 @@
+{
+  "name": "db",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+    "generate": "drizzle-kit generate:pg",
+    "push": "drizzle-kit push:pg",
+    "studio": "drizzle-kit studio",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.6.0",
+    "drizzle-orm": "^0.29.0"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^7.3.0",
+    "drizzle-kit": "^0.20.2",
+    "pg": "^8.11.3",
+    "tsconfig": "workspace:^0.1.0",
+    "typescript": "5.2.2"
+  }
+}

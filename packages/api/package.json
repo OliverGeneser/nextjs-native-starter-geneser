@@ -1,0 +1,27 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@trpc/client": "next",
+    "@trpc/server": "next",
+    "db": "workspace:^0.1.0",
+    "superjson": "2.2.1",
+    "supertokens-auth-react": "^0.35.8",
+    "supertokens-node": "^16.6.1",
+    "supertokens-web-js": "^0.8.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:^0.1.0",
+    "typescript": "5.2.2"
+  }
+}

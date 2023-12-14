@@ -4,17 +4,20 @@ import Session from 'supertokens-web-js/recipe/session'
 import { signout } from 'lib/utils/supertokensUtilities'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import React from 'react'
+import React, { Suspense } from 'react'
 import { AuthLayout } from 'ui/components/AuthLayout'
+import { api } from 'lib/utils/api'
+import { CreatePostForm, PostCardSkeleton, PostList } from './post'
 
 export const LoginResult = () => {
   const router = useRouter()
-
+  const utils = api.useContext()
   const [userId, setUserId] = React.useState<string | undefined>()
 
   async function logoutClicked() {
     await signout()
-    await router.push('/login')
+    await utils.auth.getSecretMessage.reset()
+    router.push('/login')
   }
 
   async function fetchUserData() {
@@ -62,6 +65,20 @@ export const LoginResult = () => {
           >
             Logout
           </button>
+        </div>
+        <CreatePostForm />
+        <div className="h-[40vh] w-full max-w-2xl overflow-y-scroll">
+          <Suspense
+            fallback={
+              <div className="flex w-full flex-col gap-4">
+                <PostCardSkeleton />
+                <PostCardSkeleton />
+                <PostCardSkeleton />
+              </div>
+            }
+          >
+            <PostList />
+          </Suspense>
         </div>
       </main>
     </AuthLayout>
